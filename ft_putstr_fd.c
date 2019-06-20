@@ -6,7 +6,7 @@
 /*   By: momogash <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/31 14:54:45 by momogash          #+#    #+#             */
-/*   Updated: 2019/06/18 10:55:40 by momogash         ###   ########.fr       */
+/*   Updated: 2019/06/20 15:48:43 by momogash         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void		ft_putstr_fd(char const *s, int fd)
 {
-	if (s)
+	if (s && fd >= 0 && fd <= 2)
 	{
 		write(fd, s, ft_strlen(s));
 	}
