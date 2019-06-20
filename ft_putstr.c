@@ -6,15 +6,17 @@
 /*   By: momogash <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/31 14:56:29 by momogash          #+#    #+#             */
-/*   Updated: 2019/06/18 10:50:05 by momogash         ###   ########.fr       */
+/*   Updated: 2019/06/20 12:39:14 by momogash         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void		ft_putstr(char const *s)
+void	ft_putstr(char const *s)
 {
 	size_t	i;
+	size_t	k;
+	char	*str;
 
 	i = 0;
 	if (s)
@@ -25,5 +27,15 @@ void		ft_putstr(char const *s)
 			i++;
 		}
 	}
-	return ;
+	else if (s == NULL)
+	{
+		str = "(null)";
+		k = 0;
+		while (str[k])
+		{
+			ft_putchar(str[k]);
+			k++;
+		}
+	}
+	ft_putchar('\n');
 }
