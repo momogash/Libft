@@ -6,7 +6,7 @@
 /*   By: momogash <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/31 14:34:02 by momogash          #+#    #+#             */
-/*   Updated: 2019/06/18 16:24:42 by momogash         ###   ########.fr       */
+/*   Updated: 2019/06/21 15:11:24 by momogash         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,17 +19,13 @@ char		*ft_strncat(char *s1, const char *s2, size_t n)
 
 	i = 0;
 	j = 0;
-	if (s1 && s2)
+	while (s1[i] != '\0')
+		i++;
+	while (s2[j] != '\0' && j < n)
 	{
-		while (s1[i] != '\0')
-			i++;
-		while (s2[j] != '\0' && j < n)
-		{
-			s1[i + j] = s2[j];
-			j++;
-		}
-		s1[i + j] = '\0';
-		return (s1);
+		s1[i + j] = s2[j];
+		j++;
 	}
-	return (NULL);
+	s1[i + j] = '\0';
+	return (s1);
 }

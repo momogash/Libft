@@ -6,7 +6,7 @@
 /*   By: momogash <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/31 14:56:29 by momogash          #+#    #+#             */
-/*   Updated: 2019/06/20 13:35:23 by momogash         ###   ########.fr       */
+/*   Updated: 2019/06/21 15:00:49 by momogash         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,6 @@
 void	ft_putstr(char const *s)
 {
 	size_t	i;
-	size_t	k;
-	char	*str;
 
 	i = 0;
 	if (s)
@@ -27,14 +25,5 @@ void	ft_putstr(char const *s)
 			i++;
 		}
 	}
-	else if (s == NULL)
-	{
-		str = "(null)";
-		k = 0;
-		while (str[k])
-		{
-			ft_putchar(str[k]);
-			k++;
-		}
-	}
+	return ;
 }

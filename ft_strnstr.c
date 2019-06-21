@@ -6,7 +6,7 @@
 /*   By: momogash <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/31 14:27:29 by momogash          #+#    #+#             */
-/*   Updated: 2019/06/18 16:44:12 by momogash         ###   ########.fr       */
+/*   Updated: 2019/06/21 15:15:17 by momogash         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,20 +19,17 @@ char	*ft_strnstr(const char *hay, const char *ndle, size_t len)
 
 	k = 0;
 	i = 0;
-	if (hay && ndle)
+	if (ndle[0] == '\0')
+		return ((char *)hay);
+	while (hay[i] != '\0' && i < len)
 	{
-		if (ndle[0] == '\0')
-			return ((char *)hay);
-		while (hay[i] != '\0' && i < len)
-		{
-			k = 0;
-			while (ndle[k] != '\0' && ndle[k] == hay[i + k] && i + k < len)
-				k++;
-			if (ndle[k] == '\0')
-				return ((char *)hay + i);
-			i++;
-		}
-		return (NULL);
+		k = 0;
+		while (ndle[k] != '\0' && ndle[k] == hay[i + k] && i + k < len)
+			k++;
+		if (ndle[k] == '\0')
+			return ((char *)hay + i);
+		i++;
 	}
 	return (NULL);
+}
 }
