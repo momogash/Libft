@@ -6,7 +6,7 @@
 /*   By: momogash <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/31 14:27:29 by momogash          #+#    #+#             */
-/*   Updated: 2019/06/21 15:15:17 by momogash         ###   ########.fr       */
+/*   Updated: 2019/06/24 10:23:31 by momogash         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,5 +31,4 @@ char	*ft_strnstr(const char *hay, const char *ndle, size_t len)
 		i++;
 	}
 	return (NULL);
-}
 }

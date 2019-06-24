@@ -6,7 +6,7 @@
 /*   By: momogash <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/31 16:13:52 by momogash          #+#    #+#             */
-/*   Updated: 2019/06/18 11:51:38 by momogash         ###   ########.fr       */
+/*   Updated: 2019/06/24 10:29:23 by momogash         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,5 @@
 
 void		ft_bzero(void *s, size_t n)
 {
-	if (s)
-	{
-		ft_memset(s, 0, n);
-	}
-	return ;
+	ft_memset(s, 0, n);
 }
